@@ -210,7 +210,7 @@ const Index = () => {
                               {new Date(fund.endDate).toLocaleDateString()}
                             </p>
                             <p className="voteProgressPara">
-                              {fund.voteCount} Votes
+                              {fund.totalVotes} Votes
                             </p>
                           </div>
                           <div className="progress-bar">
