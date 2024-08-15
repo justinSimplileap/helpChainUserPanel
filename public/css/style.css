@@ -569,7 +569,9 @@ input[type='checkbox'] {
 .tf__single_service:hover a {
   color: var(--colorPrimary) !important;
 }
-
+.tf__single_service:hover .voteButton {
+  background: #272727;
+}
 .tf__main_service .tf__single_service .tf__single_service_link:hover {
   color: var(--colorPrimary) !important;
 }
@@ -2397,6 +2399,7 @@ input[type='checkbox'] {
   align-items: center;
   padding: 0 1rem;
 }
+
 .VoteArrow {
   width: auto !important;
   height: auto !important;

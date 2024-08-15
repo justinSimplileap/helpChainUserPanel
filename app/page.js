@@ -1,3 +1,4 @@
+'use client';
 import Counter from '@/components/Counter';
 import Faq, { Faq2 } from '@/components/Faq';
 import Testimonial from '@/components/Testimonial';
@@ -5,7 +6,54 @@ import ContisLayout from '@/layouts/ContisLayout';
 import Link from 'next/link';
 import VoteArrow from '@/public/images/voteArrow.png';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { fetchFundsAPI, voteAPI } from '@/services/api/funds';
+import { toast } from 'react-toastify';
+import LocalStorageService from '@/services/LocalStorageService';
 const Index = () => {
+  const [funds, setFunds] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const getFunds = async () => {
+      try {
+        const result = await fetchFundsAPI();
+        setFunds(result.data);
+      } catch (error) {
+        console.error('Error fetching funds:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    getFunds();
+  }, []);
+
+  const handleVote = async (fundId) => {
+    const token = LocalStorageService.getToken();
+    if (!token) {
+      toast.error('Please login to vote');
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const result = await voteAPI(fundId);
+      toast.success('Voted successfully');
+      return result;
+    } catch (error) {
+      console.error('Vote failed:', error);
+      const errorMessage = error.response?.data?.message || 'An error occurred';
+      console.error('Error message:', errorMessage);
+      toast.error(errorMessage);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // if (loading) {
+  //   return <p>Loading...</p>;
+  // }
   return (
     <ContisLayout footer={1}>
       {/*============================
@@ -125,222 +173,56 @@ const Index = () => {
             <div className="row">
               <div className="col-xl-9">
                 <div className="row">
-                  <div className="col-xl-4 col-md-6 mb-4">
-                    <div className="tf__single_service">
-                      <div className="voteBtnMain">
-                        <span>
-                          <i className="ca-icon-edit-pen" />
-                        </span>
-                        <button className="voteButton">
-                          Vote +1
-                          <Image
-                            className="VoteArrow"
-                            src={VoteArrow}
-                            alt="arrow"
-                          ></Image>
-                        </button>
-                      </div>
-
-                      <Link legacyBehavior href="/use-cases-details">
-                        <a className="tf__single_service_link">Fund Title 1</a>
-                      </Link>
-                      <p>Fund description for fund title 1 and its details</p>
-                      <div className="VoteCountMain">
-                        <div className="voteProgressMain">
-                          <p className="voteProgressPara">
-                            End Date - 27 Oct 2024
-                          </p>
-                          <p className="voteProgressPara">2178 Votes</p>
+                  {funds.map((fund) => (
+                    <div key={fund.id} className="col-xl-4 col-md-6 mb-4">
+                      <div className="tf__single_service">
+                        <div className="voteBtnMain">
+                          <span>
+                            <i className="ca-icon-edit-pen" />
+                          </span>
+                          <button
+                            className="voteButton"
+                            onClick={() => handleVote(fund.id)}
+                            disabled={loading}
+                          >
+                            {loading ? 'Voting...' : 'Vote +1'}
+                            <Image
+                              className="VoteArrow"
+                              src={VoteArrow}
+                              alt="arrow"
+                            />
+                          </button>
                         </div>
-                        <div className="progress-bar">
-                          <div
-                            className="progress"
-                            style={{ width: '70%' }}
-                          ></div>
+
+                        <Link
+                          legacyBehavior
+                          href={`/use-cases-details/${fund.id}`}
+                        >
+                          <a className="tf__single_service_link">
+                            {fund.title}
+                          </a>
+                        </Link>
+                        <p>{fund.description}</p>
+                        <div className="VoteCountMain">
+                          <div className="voteProgressMain">
+                            <p className="voteProgressPara">
+                              End Date -{' '}
+                              {new Date(fund.endDate).toLocaleDateString()}
+                            </p>
+                            <p className="voteProgressPara">
+                              {fund.voteCount} Votes
+                            </p>
+                          </div>
+                          <div className="progress-bar">
+                            <div
+                              className="progress"
+                              style={{ width: `${fund.votePercentage}%` }} // Adjust based on your data
+                            ></div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="col-xl-4 col-md-6 mb-4">
-                    <div className="tf__single_service">
-                      <div className="voteBtnMain">
-                        <span>
-                          <i className="ca-icon-edit-pen" />
-                        </span>
-                        <button className="voteButton">
-                          Vote +1
-                          <Image
-                            className="VoteArrow"
-                            src={VoteArrow}
-                            alt="arrow"
-                          ></Image>
-                        </button>
-                      </div>
-
-                      <Link legacyBehavior href="/use-cases-details">
-                        <a className="tf__single_service_link">Fund Title 1</a>
-                      </Link>
-                      <p>Fund description for fund title 1 and its details</p>
-                      <div className="VoteCountMain">
-                        <div className="voteProgressMain">
-                          <p className="voteProgressPara">
-                            End Date - 27 Oct 2024
-                          </p>
-                          <p className="voteProgressPara">2178 Votes</p>
-                        </div>
-                        <div className="progress-bar">
-                          <div
-                            className="progress"
-                            style={{ width: '70%' }}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-4 col-md-6 mb-4">
-                    <div className="tf__single_service">
-                      <div className="voteBtnMain">
-                        <span>
-                          <i className="ca-icon-edit-pen" />
-                        </span>
-                        <button className="voteButton">
-                          Vote +1
-                          <Image
-                            className="VoteArrow"
-                            src={VoteArrow}
-                            alt="arrow"
-                          ></Image>
-                        </button>
-                      </div>
-
-                      <Link legacyBehavior href="/use-cases-details">
-                        <a className="tf__single_service_link">Fund Title 1</a>
-                      </Link>
-                      <p>Fund description for fund title 1 and its details</p>
-                      <div className="VoteCountMain">
-                        <div className="voteProgressMain">
-                          <p className="voteProgressPara">
-                            End Date - 27 Oct 2024
-                          </p>
-                          <p className="voteProgressPara">2178 Votes</p>
-                        </div>
-                        <div className="progress-bar">
-                          <div
-                            className="progress"
-                            style={{ width: '70%' }}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-4 col-md-6 mb-4">
-                    <div className="tf__single_service">
-                      <div className="voteBtnMain">
-                        <span>
-                          <i className="ca-icon-edit-pen" />
-                        </span>
-                        <button className="voteButton">
-                          Vote +1
-                          <Image
-                            className="VoteArrow"
-                            src={VoteArrow}
-                            alt="arrow"
-                          ></Image>
-                        </button>
-                      </div>
-
-                      <Link legacyBehavior href="/use-cases-details">
-                        <a className="tf__single_service_link">Fund Title 1</a>
-                      </Link>
-                      <p>Fund description for fund title 1 and its details</p>
-                      <div className="VoteCountMain">
-                        <div className="voteProgressMain">
-                          <p className="voteProgressPara">
-                            End Date - 27 Oct 2024
-                          </p>
-                          <p className="voteProgressPara">2178 Votes</p>
-                        </div>
-                        <div className="progress-bar">
-                          <div
-                            className="progress"
-                            style={{ width: '70%' }}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-4 col-md-6 mb-4">
-                    <div className="tf__single_service">
-                      <div className="voteBtnMain">
-                        <span>
-                          <i className="ca-icon-edit-pen" />
-                        </span>
-                        <button className="voteButton">
-                          Vote +1
-                          <Image
-                            className="VoteArrow"
-                            src={VoteArrow}
-                            alt="arrow"
-                          ></Image>
-                        </button>
-                      </div>
-
-                      <Link legacyBehavior href="/use-cases-details">
-                        <a className="tf__single_service_link">Fund Title 1</a>
-                      </Link>
-                      <p>Fund description for fund title 1 and its details</p>
-                      <div className="VoteCountMain">
-                        <div className="voteProgressMain">
-                          <p className="voteProgressPara">
-                            End Date - 27 Oct 2024
-                          </p>
-                          <p className="voteProgressPara">2178 Votes</p>
-                        </div>
-                        <div className="progress-bar">
-                          <div
-                            className="progress"
-                            style={{ width: '70%' }}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-4 col-md-6 mb-4">
-                    <div className="tf__single_service">
-                      <div className="voteBtnMain">
-                        <span>
-                          <i className="ca-icon-edit-pen" />
-                        </span>
-                        <button className="voteButton">
-                          Vote +1
-                          <Image
-                            className="VoteArrow"
-                            src={VoteArrow}
-                            alt="arrow"
-                          ></Image>
-                        </button>
-                      </div>
-
-                      <Link legacyBehavior href="/use-cases-details">
-                        <a className="tf__single_service_link">Fund Title 1</a>
-                      </Link>
-                      <p>Fund description for fund title 1 and its details</p>
-                      <div className="VoteCountMain">
-                        <div className="voteProgressMain">
-                          <p className="voteProgressPara">
-                            End Date - 27 Oct 2024
-                          </p>
-                          <p className="voteProgressPara">2178 Votes</p>
-                        </div>
-                        <div className="progress-bar">
-                          <div
-                            className="progress"
-                            style={{ width: '70%' }}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
               <div className="col-xl-3">
