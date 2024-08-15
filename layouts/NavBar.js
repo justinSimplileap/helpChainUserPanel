@@ -1,10 +1,13 @@
-"use client";
-import { contisUtilit } from "@/utility";
-import Link from "next/link";
-import { Fragment, useEffect } from "react";
-import { Accordion } from "react-bootstrap";
+'use client';
+import { useAuth } from '@/context/AuthContext';
+import { contisUtilit } from '@/utility';
+import Link from 'next/link';
+import { Fragment, useEffect, useState } from 'react';
+import { Accordion } from 'react-bootstrap';
 
 const NavBar = () => {
+  const { isAuthenticated, logout } = useAuth();
+
   useEffect(() => {
     contisUtilit.menuFix();
   }, []);
@@ -23,7 +26,7 @@ const NavBar = () => {
             </a>
           </Link>
           <Accordion.Toggle
-            as={"button"}
+            as={'button'}
             className="navbar-toggler"
             eventKey="collapseOne"
           >
@@ -105,39 +108,33 @@ const NavBar = () => {
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Blogs <i className="far fa-plus" />
-                  </a>
-                  <ul className="tf__dropdown">
-                    <li>
-                      <Link legacyBehavior href="blog">
-                        <a>Blog</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link legacyBehavior href="blog_details">
-                        <a>Blog details</a>
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item">
                   <Link legacyBehavior href="contact">
                     <a className="nav-link"> contact</a>
                   </Link>
                 </li>
               </ul>
               <ul className="tf__menu_btn d-flex flex-wrap align-items-center">
-                <li>
-                  <Link legacyBehavior href="login">
-                    Log in
-                  </Link>
-                </li>
-                <li>
-                  <Link legacyBehavior href="signup">
-                    <a className="tf__menu_2nd_btn"> Sign up</a>
-                  </Link>
-                </li>
+                {isAuthenticated ? (
+                  <li>
+                    <button onClick={logout} className="btn btn-primary">
+                      Logout
+                    </button>
+                  </li>
+                ) : (
+                  <>
+                    <li>
+                      <Link legacyBehavior href="login">
+                        Log in
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link legacyBehavior href="signup">
+                        <a className="tf__menu_2nd_btn"> Sign up</a>
+                      </Link>
+                    </li>
+                  </>
+                )}
               </ul>
             </Fragment>
           </Accordion.Collapse>

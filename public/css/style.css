@@ -23,7 +23,7 @@ CSS TABLE OF CONTENTS
 /*==============================
   GLOBAL CSS START
 ===============================*/
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
@@ -36,8 +36,8 @@ CSS TABLE OF CONTENTS
   --colorSecondary: #111013;
   --colorWhite: #ffffff;
   --paraColor: #5c728e;
-  --paraFont: "Inter", sans-serif;
-  --headingFont: "DM Sans", sans-serif;
+  --paraFont: 'Inter', sans-serif;
+  --headingFont: 'DM Sans', sans-serif;
   --boxShadow: 0px 4px 12px 0px rgba(17, 16, 19, 0.1);
   --gradiantBg: linear-gradient(
     45deg,
@@ -107,7 +107,7 @@ button {
 button:focus {
   outline: none;
 }
-input[type="checkbox"] {
+input[type='checkbox'] {
   cursor: pointer;
 }
 .tf__common_btn {
@@ -199,29 +199,6 @@ input[type="checkbox"] {
 /*==============================
   HOME PAGE START
 ===============================*/
-/* topbar start */
-.tf__topbar {
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  background: var(--colorSecondary);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
-}
-
-.tf__topbar p {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--colorWhite);
-  text-align: center;
-}
-
-.tf__topbar p a {
-  color: var(--colorPrimary);
-  text-transform: capitalize;
-}
 
 /* topbar end */
 
@@ -232,7 +209,6 @@ input[type="checkbox"] {
   width: 100%;
   height: 70px;
   position: fixed;
-  top: 40px;
   left: 0;
   z-index: 999;
   transition: all linear 0.3s;
@@ -252,7 +228,7 @@ input[type="checkbox"] {
   font-size: 24px;
   color: var(--colorSecondary);
   font-weight: 700;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 .tf__main_menu .navbar-nav .nav-item {
@@ -339,7 +315,7 @@ input[type="checkbox"] {
 }
 
 .tf__dropdown li a::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 15px;
   height: 2px;
@@ -424,7 +400,7 @@ input[type="checkbox"] {
 
 .tf__banner::after {
   position: absolute;
-  content: "";
+  content: '';
   background: url(../images/banner_shape_3.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -450,7 +426,7 @@ input[type="checkbox"] {
 }
 
 .tf__banner_text h1 {
-  font-size: 106px;
+  font-size: 90px;
   font-weight: 700;
   line-height: 95%;
   margin-bottom: 10px;
@@ -461,12 +437,13 @@ input[type="checkbox"] {
   font-weight: 500;
   font-family: var(--headingFont);
   color: var(--colorSecondary);
-  margin-bottom: 30px;
+  width: 60%;
+  margin: 30px auto;
 }
 
 .tf__banner_text::after {
   position: absolute;
-  content: "";
+  content: '';
   background: url(../images/banner_shape_1.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -479,8 +456,8 @@ input[type="checkbox"] {
 
 .tf__banner_text::before {
   position: absolute;
-  content: "";
-  background: url("../images/banner_shape_2.png") center center / cover
+  content: '';
+  background: url('../images/banner_shape_2.png') center center / cover
     no-repeat;
   width: 300px;
   height: 140px;
@@ -642,7 +619,7 @@ input[type="checkbox"] {
 
 .tf__single_service_right {
   background: var(--colorPrimary);
-  padding: 50px 30px 164px;
+  padding: 50px 30px 200px;
   border-radius: 10px;
   position: relative;
 }
@@ -680,7 +657,7 @@ input[type="checkbox"] {
 
 .tf__single_service_right::after {
   position: absolute;
-  content: "";
+  content: '';
   background: url(../images/service_shape.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -699,9 +676,9 @@ input[type="checkbox"] {
   height: 460px;
 }
 
-.tf__work_process_img::after {
+/* .tf__work_process_img::after {
   position: absolute;
-  content: "";
+  content: '';
   background: url(../images/work_img-2.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -716,7 +693,7 @@ input[type="checkbox"] {
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
-}
+} */
 
 .tf__process_accordion {
   margin-bottom: 40px;
@@ -758,7 +735,7 @@ input[type="checkbox"] {
 
 .tf__process_accordion .accordion-item .tf__process_accordion_btn span::after {
   position: absolute;
-  content: "";
+  content: '';
   width: 1px;
   height: 28px;
   background: var(--colorSecondary);
@@ -801,7 +778,7 @@ input[type="checkbox"] {
 
 .tf__process_accordion .accordion-collapse::after {
   position: absolute;
-  content: "";
+  content: '';
   width: 1px;
   height: 139px;
   background: var(--colorSecondary);
@@ -929,8 +906,8 @@ input[type="checkbox"] {
 }
 
 .tf__content_creator_top_text ul li::before {
-  content: "\e90c";
-  font-family: "contis-Icon" !important;
+  content: '\e90c';
+  font-family: 'contis-Icon' !important;
   font-size: 20px;
   color: var(--colorPrimary);
 }
@@ -998,7 +975,7 @@ input[type="checkbox"] {
 
 .tf__single_testimonial::after {
   position: absolute;
-  content: "";
+  content: '';
   background: url(../images/testimonial_shape.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -1128,8 +1105,8 @@ input[type="checkbox"] {
 }
 
 .tf__single_pricing ul li::before {
-  content: "\e90c";
-  font-family: "contis-Icon" !important;
+  content: '\e90c';
+  font-family: 'contis-Icon' !important;
   font-size: 20px;
   color: var(--colorPrimary);
 }
@@ -1188,6 +1165,7 @@ input[type="checkbox"] {
   -moz-border-radius: 0 !important;
   -ms-border-radius: 0 !important;
   -o-border-radius: 0 !important;
+  text-align: left;
 }
 .tf__faq_accordion .accordion-item {
   border-bottom: 1.5px solid;
@@ -1224,17 +1202,17 @@ input[type="checkbox"] {
 .tf__faq_accordion .accordion-button::after,
 .tf__faq_accordion .accordion-button:not(.collapsed)::after {
   font-size: 20px;
-  font-family: "Font Awesome 6 Pro";
+  font-family: 'Font Awesome 6 Pro';
   background-image: none;
   font-weight: 400;
 }
 
 .tf__faq_accordion .accordion-button::after {
-  content: "\2b";
+  content: '\2b';
 }
 
 .tf__faq_accordion .accordion-button:not(.collapsed)::after {
-  content: "\f068";
+  content: '\f068';
 }
 
 /*faq end*/
@@ -1307,8 +1285,8 @@ input[type="checkbox"] {
 }
 
 .tf__unlock_text ul li::before {
-  content: "\e90c";
-  font-family: "contis-Icon" !important;
+  content: '\e90c';
+  font-family: 'contis-Icon' !important;
   font-size: 20px;
   color: var(--colorPrimary);
 }
@@ -1379,7 +1357,7 @@ input[type="checkbox"] {
 }
 
 .tf__quick_link ul li a::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 11px;
   height: 3px;
@@ -1640,7 +1618,7 @@ input[type="checkbox"] {
 
 .tf__team_img::after {
   position: absolute;
-  content: "";
+  content: '';
   background: url(../images/team_shape.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -1853,8 +1831,8 @@ input[type="checkbox"] {
   align-items: center;
 }
 .tf__single_blog_text ul li:not(:first-child)::before {
-  content: "\f111";
-  font-family: "Font Awesome 6 Pro";
+  content: '\f111';
+  font-family: 'Font Awesome 6 Pro';
   font-weight: 900;
   font-size: 3px;
   margin-right: 7px;
@@ -2376,3 +2354,80 @@ input[type="checkbox"] {
 /*==============================
   PRELOADER END
 ===============================*/
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.progress {
+  height: 5px;
+  background-color: #4caf50;
+  width: 0;
+  transition: width 0.5s ease-in-out;
+}
+.voteProgressMain {
+  display: flex;
+  justify-content: space-between;
+}
+.voteProgressPara {
+  color: #5c728e !important;
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  margin-top: 0 !important;
+}
+.VoteCountMain {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 7px;
+  margin-top: 1.5rem;
+}
+.voteButton {
+  width: 121px;
+  height: 47px;
+  border-radius: 6px;
+  background: #111013;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.VoteArrow {
+  width: auto !important;
+  height: auto !important;
+}
+.voteBtnMain {
+  display: flex;
+  justify-content: space-between;
+}
+
+.loaderAnime {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.tf__common_btn-cust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

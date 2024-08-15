@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const Footer = ({ footer }) => {
   switch (footer) {
@@ -34,13 +34,9 @@ const Footer1 = () => {
                 <div className="col-xl-5 col-sm-8 col-md-8 col-lg-5 mx-auto">
                   <div className="tf__unlock_text">
                     <div className="tf__common_heading tf__unlock_heading">
-                      <h6>UNLOCK THE POWER</h6>
-                      <h2>Stop wasting time &amp; money on content</h2>
+                      <h6>BE THE PART OF THE CHANGE</h6>
+                      <h2>Uniting Generosity, Empowering Change</h2>
                     </div>
-                    <ul className="d-flex">
-                      <li>No credit card required</li>
-                      <li>2,000 free words per month</li>
-                    </ul>
                   </div>
                 </div>
                 <div className="col-xl-4 col-sm-4 col-md-4 col-lg-4 m-auto d-flex justify-content-end">
@@ -97,50 +93,50 @@ const Footer1 = () => {
           </div>
           <div className="col-xl-2 col-sm-6 col-md-3">
             <div className="tf__quick_link">
-              <h5>USE CASE</h5>
+              <h5>QUICK LINKS</h5>
               <ul>
                 <li>
-                  <a href="#">Emails</a>
+                  <a href="#">Login</a>
                 </li>
                 <li>
-                  <a href="#">Social media Ads</a>
+                  <a href="#">Registration</a>
                 </li>
                 <li>
-                  <a href="#">Text editing</a>
+                  <a href="#">All Funds</a>
                 </li>
                 <li>
-                  <a href="#">Copy writing</a>
+                  <a href="#">Donate</a>
                 </li>
                 <li>
-                  <a href="#">Creative writing</a>
+                  <a href="#">Contact Us</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-xl-2 col-sm-6 col-md-3">
             <div className="tf__quick_link tf__quick_link_sm">
-              <h5>solutions</h5>
+              <h5>RECENTS FUNDS</h5>
               <ul>
                 <li>
-                  <a href="#">Ecommerce</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
                 <li>
-                  <a href="#">Blogger/Vlogger</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
                 <li>
-                  <a href="#">Small business</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
                 <li>
-                  <a href="#">All solutions</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-xl-2 col-sm-6 col-md-3">
             <div className="tf__quick_link tf__quick_link_sm">
-              <h5>RESOURCES</h5>
+              <h5>TOP VOLUNTEERS</h5>
               <ul>
-                <li>
+                {/* <li>
                   <a href="#">Knowledge base</a>
                 </li>
                 <li>
@@ -154,7 +150,7 @@ const Footer1 = () => {
                 </li>
                 <li>
                   <a href="#">Affiliate program</a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -186,7 +182,7 @@ const Footer1 = () => {
         <div className="row">
           <div className="col-xl-12">
             <div className="tf__copyright d-flex flex-wrap justify-content-between mt_50 mb_30">
-              <p>© 2023 Contis. All rights reserved.</p>
+              <p>© 2024 Helpchain. All rights reserved.</p>
               <ul className="d-flex flex-wrap">
                 <li>
                   <a href="#">Sitemap</a>
@@ -252,50 +248,50 @@ const Footer2 = () => {
           </div>
           <div className="col-xl-2 col-sm-6 col-md-3">
             <div className="tf__quick_link">
-              <h5>USE CASE</h5>
+              <h5>QUICK LINKS</h5>
               <ul>
                 <li>
-                  <a href="#">Emails</a>
+                  <a href="#">Login</a>
                 </li>
                 <li>
-                  <a href="#">Social media Ads</a>
+                  <a href="#">Registration</a>
                 </li>
                 <li>
-                  <a href="#">Text editing</a>
+                  <a href="#">All Funds</a>
                 </li>
                 <li>
-                  <a href="#">Copy writing</a>
+                  <a href="#">Donate</a>
                 </li>
                 <li>
-                  <a href="#">Creative writing</a>
+                  <a href="#">Contact Us</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-xl-2 col-sm-6 col-md-3">
             <div className="tf__quick_link tf__quick_link_sm">
-              <h5>solutions</h5>
+              <h5>RECENTS FUNDS</h5>
               <ul>
                 <li>
-                  <a href="#">Ecommerce</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
                 <li>
-                  <a href="#">Blogger/Vlogger</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
                 <li>
-                  <a href="#">Small business</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
                 <li>
-                  <a href="#">All solutions</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-xl-2 col-sm-6 col-md-3">
             <div className="tf__quick_link tf__quick_link_sm">
-              <h5>RESOURCES</h5>
+              <h5>TOP VOLUNTEERS</h5>
               <ul>
-                <li>
+                {/* <li>
                   <a href="#">Knowledge base</a>
                 </li>
                 <li>
@@ -309,7 +305,7 @@ const Footer2 = () => {
                 </li>
                 <li>
                   <a href="#">Affiliate program</a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -341,7 +337,7 @@ const Footer2 = () => {
         <div className="row">
           <div className="col-xl-12">
             <div className="tf__copyright d-flex flex-wrap justify-content-between mt_50 mb_30">
-              <p>© 2023 Contis. All rights reserved.</p>
+              <p>© 2024 Helpchain. All rights reserved.</p>
               <ul className="d-flex flex-wrap">
                 <li>
                   <a href="#">Sitemap</a>
@@ -408,50 +404,50 @@ const Footer3 = () => {
           </div>
           <div className="col-xl-2 col-sm-6 col-md-3">
             <div className="tf__quick_link">
-              <h5>USE CASE</h5>
+              <h5>QUICK LINKS</h5>
               <ul>
                 <li>
-                  <a href="#">Emails</a>
+                  <a href="#">Login</a>
                 </li>
                 <li>
-                  <a href="#">Social media Ads</a>
+                  <a href="#">Registration</a>
                 </li>
                 <li>
-                  <a href="#">Text editing</a>
+                  <a href="#">All Funds</a>
                 </li>
                 <li>
-                  <a href="#">Copy writing</a>
+                  <a href="#">Donate</a>
                 </li>
                 <li>
-                  <a href="#">Creative writing</a>
+                  <a href="#">Contact Us</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-xl-2 col-sm-6 col-md-3">
             <div className="tf__quick_link tf__quick_link_sm">
-              <h5>solutions</h5>
+              <h5>RECENTS FUNDS</h5>
               <ul>
                 <li>
-                  <a href="#">Ecommerce</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
                 <li>
-                  <a href="#">Blogger/Vlogger</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
                 <li>
-                  <a href="#">Small business</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
                 <li>
-                  <a href="#">All solutions</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-xl-2 col-sm-6 col-md-3">
             <div className="tf__quick_link tf__quick_link_sm">
-              <h5>RESOURCES</h5>
+              <h5>TOP VOLUNTEERS</h5>
               <ul>
-                <li>
+                {/* <li>
                   <a href="#">Knowledge base</a>
                 </li>
                 <li>
@@ -465,7 +461,7 @@ const Footer3 = () => {
                 </li>
                 <li>
                   <a href="#">Affiliate program</a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -497,7 +493,7 @@ const Footer3 = () => {
         <div className="row">
           <div className="col-xl-12">
             <div className="tf__copyright d-flex flex-wrap justify-content-between mt_50 mb_30">
-              <p>© 2023 Contis. All rights reserved.</p>
+              <p>© 2024 Helpchain. All rights reserved.</p>
               <ul className="d-flex flex-wrap">
                 <li>
                   <a href="#">Sitemap</a>
@@ -602,50 +598,50 @@ const Footer4 = () => {
           </div>
           <div className="col-xl-2 col-sm-6 col-md-3">
             <div className="tf__quick_link">
-              <h5>USE CASE</h5>
+              <h5>QUICK LINKS</h5>
               <ul>
                 <li>
-                  <a href="#">Emails</a>
+                  <a href="#">Login</a>
                 </li>
                 <li>
-                  <a href="#">Social media Ads</a>
+                  <a href="#">Registration</a>
                 </li>
                 <li>
-                  <a href="#">Text editing</a>
+                  <a href="#">All Funds</a>
                 </li>
                 <li>
-                  <a href="#">Copy writing</a>
+                  <a href="#">Donate</a>
                 </li>
                 <li>
-                  <a href="#">Creative writing</a>
+                  <a href="#">Contact Us</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-xl-2 col-sm-6 col-md-3">
             <div className="tf__quick_link tf__quick_link_sm">
-              <h5>solutions</h5>
+              <h5>RECENTS FUNDS</h5>
               <ul>
                 <li>
-                  <a href="#">Ecommerce</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
                 <li>
-                  <a href="#">Blogger/Vlogger</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
                 <li>
-                  <a href="#">Small business</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
                 <li>
-                  <a href="#">All solutions</a>
+                  <a href="#">Fund Title 1</a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-xl-2 col-sm-6 col-md-3">
             <div className="tf__quick_link tf__quick_link_sm">
-              <h5>RESOURCES</h5>
+              <h5>TOP VOLUNTEERS</h5>
               <ul>
-                <li>
+                {/* <li>
                   <a href="#">Knowledge base</a>
                 </li>
                 <li>
@@ -659,7 +655,7 @@ const Footer4 = () => {
                 </li>
                 <li>
                   <a href="#">Affiliate program</a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -691,7 +687,7 @@ const Footer4 = () => {
         <div className="row">
           <div className="col-xl-12">
             <div className="tf__copyright d-flex flex-wrap justify-content-between mt_50 mb_30">
-              <p>© 2023 Contis. All rights reserved.</p>
+              <p>© 2024 Helpchain. All rights reserved.</p>
               <ul className="d-flex flex-wrap">
                 <li>
                   <a href="#">Sitemap</a>

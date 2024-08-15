@@ -1,8 +1,10 @@
-import Counter from "@/components/Counter";
-import Faq, { Faq2 } from "@/components/Faq";
-import Testimonial from "@/components/Testimonial";
-import ContisLayout from "@/layouts/ContisLayout";
-import Link from "next/link";
+import Counter from '@/components/Counter';
+import Faq, { Faq2 } from '@/components/Faq';
+import Testimonial from '@/components/Testimonial';
+import ContisLayout from '@/layouts/ContisLayout';
+import Link from 'next/link';
+import VoteArrow from '@/public/images/voteArrow.png';
+import Image from 'next/image';
 const Index = () => {
   return (
     <ContisLayout footer={1}>
@@ -12,18 +14,18 @@ const Index = () => {
       <section className="tf__banner pt_160">
         <div className="container">
           <div className="row">
-            <div className="col-xl-7 m-auto">
+            <div className="col-xl-8 m-auto">
               <div className="tf__banner_text">
-                <h6>Contis.ai MAKES CONTENT FAST &amp; EASY</h6>
-                <h1>Write content 10x faster</h1>
+                <h6>POWERED BY STELLAR NETWORK</h6>
+                <h1>Empower, Donate, Volunteer</h1>
                 <p>
-                  Give customers a structutal experience they'll and come back.
-                  <br />
-                  Join #1 app to track your data.
+                  Connect with a blockchain-powered platform to donate,
+                  volunteer, and support causes. Empower change and make a real
+                  difference together
                 </p>
                 <Link legacyBehavior href="/signup">
                   <a className="tf__common_btn">
-                    Sign up for free{" "}
+                    Sign up for free{' '}
                     <i className="fa-regular fa-arrow-right-long" />
                   </a>
                 </Link>
@@ -34,7 +36,7 @@ const Index = () => {
             <div className="col-xl-10 m-auto">
               <div className="tf__banner_img">
                 <img
-                  src="images/banner_img.jpg"
+                  src="images/banner_img.png"
                   alt="banner img"
                   className="img-fluid w-100"
                 />
@@ -115,10 +117,8 @@ const Index = () => {
             <div className="row">
               <div className="col-xl-8 col-md-8 m-auto">
                 <div className="tf__common_heading">
-                  <h6>
-                    <span>Contis.ai</span> HELP YOU TO CREATE CONTENT FAST
-                  </h6>
-                  <h2>Experience the full power of an AI content generator</h2>
+                  <h6>Explore and Vote</h6>
+                  <h2>Your Voice, Your Impact on Available Funds</h2>
                 </div>
               </div>
             </div>
@@ -127,110 +127,218 @@ const Index = () => {
                 <div className="row">
                   <div className="col-xl-4 col-md-6 mb-4">
                     <div className="tf__single_service">
-                      <span>
-                        <i className="ca-icon-edit-pen" />
-                      </span>
+                      <div className="voteBtnMain">
+                        <span>
+                          <i className="ca-icon-edit-pen" />
+                        </span>
+                        <button className="voteButton">
+                          Vote +1
+                          <Image
+                            className="VoteArrow"
+                            src={VoteArrow}
+                            alt="arrow"
+                          ></Image>
+                        </button>
+                      </div>
+
                       <Link legacyBehavior href="/use-cases-details">
-                        <a className="tf__single_service_link">
-                          Article generation
-                        </a>
+                        <a className="tf__single_service_link">Fund Title 1</a>
                       </Link>
-                      <p>
-                        Write unique &amp; plagiarism- free content for blogs
-                      </p>
-                      <ul>
-                        <li>Blog Article Writer</li>
-                        <li>Blog Ideas, Intros</li>
-                      </ul>
+                      <p>Fund description for fund title 1 and its details</p>
+                      <div className="VoteCountMain">
+                        <div className="voteProgressMain">
+                          <p className="voteProgressPara">
+                            End Date - 27 Oct 2024
+                          </p>
+                          <p className="voteProgressPara">2178 Votes</p>
+                        </div>
+                        <div className="progress-bar">
+                          <div
+                            className="progress"
+                            style={{ width: '70%' }}
+                          ></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className="col-xl-4 col-md-6 mb-4">
                     <div className="tf__single_service">
-                      <span>
-                        <i className="ca-icon-bag" />
-                      </span>
+                      <div className="voteBtnMain">
+                        <span>
+                          <i className="ca-icon-edit-pen" />
+                        </span>
+                        <button className="voteButton">
+                          Vote +1
+                          <Image
+                            className="VoteArrow"
+                            src={VoteArrow}
+                            alt="arrow"
+                          ></Image>
+                        </button>
+                      </div>
+
                       <Link legacyBehavior href="/use-cases-details">
-                        <a className="tf__single_service_link">
-                          Ecommerce copy
-                        </a>
+                        <a className="tf__single_service_link">Fund Title 1</a>
                       </Link>
-                      <p>
-                        Write unique &amp; plagiarism- free content for blogs
-                      </p>
-                      <ul>
-                        <li>Product Descriptions</li>
-                        <li>Product Benefits</li>
-                      </ul>
+                      <p>Fund description for fund title 1 and its details</p>
+                      <div className="VoteCountMain">
+                        <div className="voteProgressMain">
+                          <p className="voteProgressPara">
+                            End Date - 27 Oct 2024
+                          </p>
+                          <p className="voteProgressPara">2178 Votes</p>
+                        </div>
+                        <div className="progress-bar">
+                          <div
+                            className="progress"
+                            style={{ width: '70%' }}
+                          ></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className="col-xl-4 col-md-6 mb-4">
                     <div className="tf__single_service">
-                      <span>
-                        <i className="ca-icon-document" />
-                      </span>
+                      <div className="voteBtnMain">
+                        <span>
+                          <i className="ca-icon-edit-pen" />
+                        </span>
+                        <button className="voteButton">
+                          Vote +1
+                          <Image
+                            className="VoteArrow"
+                            src={VoteArrow}
+                            alt="arrow"
+                          ></Image>
+                        </button>
+                      </div>
+
                       <Link legacyBehavior href="/use-cases-details">
-                        <a className="tf__single_service_link">Sales copy</a>
+                        <a className="tf__single_service_link">Fund Title 1</a>
                       </Link>
-                      <p>
-                        Write unique &amp; plagiarism- free content for blogs
-                      </p>
-                      <ul>
-                        <li>AIDA</li>
-                        <li>Pain-Agitate-Solution</li>
-                      </ul>
+                      <p>Fund description for fund title 1 and its details</p>
+                      <div className="VoteCountMain">
+                        <div className="voteProgressMain">
+                          <p className="voteProgressPara">
+                            End Date - 27 Oct 2024
+                          </p>
+                          <p className="voteProgressPara">2178 Votes</p>
+                        </div>
+                        <div className="progress-bar">
+                          <div
+                            className="progress"
+                            style={{ width: '70%' }}
+                          ></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className="col-xl-4 col-md-6 mb-4">
                     <div className="tf__single_service">
-                      <span>
-                        <i className="ca-icon-bookmark" />
-                      </span>
+                      <div className="voteBtnMain">
+                        <span>
+                          <i className="ca-icon-edit-pen" />
+                        </span>
+                        <button className="voteButton">
+                          Vote +1
+                          <Image
+                            className="VoteArrow"
+                            src={VoteArrow}
+                            alt="arrow"
+                          ></Image>
+                        </button>
+                      </div>
+
                       <Link legacyBehavior href="/use-cases-details">
-                        <a className="tf__single_service_link">
-                          Social media cont.
-                        </a>
+                        <a className="tf__single_service_link">Fund Title 1</a>
                       </Link>
-                      <p>
-                        Write unique &amp; plagiarism- free content for blogs
-                      </p>
-                      <ul>
-                        <li>Inspiration Ideas</li>
-                        <li>YouTube Titles</li>
-                      </ul>
+                      <p>Fund description for fund title 1 and its details</p>
+                      <div className="VoteCountMain">
+                        <div className="voteProgressMain">
+                          <p className="voteProgressPara">
+                            End Date - 27 Oct 2024
+                          </p>
+                          <p className="voteProgressPara">2178 Votes</p>
+                        </div>
+                        <div className="progress-bar">
+                          <div
+                            className="progress"
+                            style={{ width: '70%' }}
+                          ></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className="col-xl-4 col-md-6 mb-4">
                     <div className="tf__single_service">
-                      <span>
-                        <i className="ca-icon-ticket-star" />
-                      </span>
+                      <div className="voteBtnMain">
+                        <span>
+                          <i className="ca-icon-edit-pen" />
+                        </span>
+                        <button className="voteButton">
+                          Vote +1
+                          <Image
+                            className="VoteArrow"
+                            src={VoteArrow}
+                            alt="arrow"
+                          ></Image>
+                        </button>
+                      </div>
+
                       <Link legacyBehavior href="/use-cases-details">
-                        <a className="tf__single_service_link">Ad copy</a>
+                        <a className="tf__single_service_link">Fund Title 1</a>
                       </Link>
-                      <p>
-                        Write unique &amp; plagiarism- free content for blogs
-                      </p>
-                      <ul>
-                        <li>google ad</li>
-                        <li>facebook ad</li>
-                      </ul>
+                      <p>Fund description for fund title 1 and its details</p>
+                      <div className="VoteCountMain">
+                        <div className="voteProgressMain">
+                          <p className="voteProgressPara">
+                            End Date - 27 Oct 2024
+                          </p>
+                          <p className="voteProgressPara">2178 Votes</p>
+                        </div>
+                        <div className="progress-bar">
+                          <div
+                            className="progress"
+                            style={{ width: '70%' }}
+                          ></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className="col-xl-4 col-md-6 mb-4">
                     <div className="tf__single_service">
-                      <span>
-                        <i className="ca-icon-graph" />
-                      </span>
+                      <div className="voteBtnMain">
+                        <span>
+                          <i className="ca-icon-edit-pen" />
+                        </span>
+                        <button className="voteButton">
+                          Vote +1
+                          <Image
+                            className="VoteArrow"
+                            src={VoteArrow}
+                            alt="arrow"
+                          ></Image>
+                        </button>
+                      </div>
+
                       <Link legacyBehavior href="/use-cases-details">
-                        <a className="tf__single_service_link">Startup tools</a>
+                        <a className="tf__single_service_link">Fund Title 1</a>
                       </Link>
-                      <p>
-                        Write unique &amp; plagiarism- free content for blogs
-                      </p>
-                      <ul>
-                        <li>Slogan Generator</li>
-                        <li>Audience Refiner</li>
-                      </ul>
+                      <p>Fund description for fund title 1 and its details</p>
+                      <div className="VoteCountMain">
+                        <div className="voteProgressMain">
+                          <p className="voteProgressPara">
+                            End Date - 27 Oct 2024
+                          </p>
+                          <p className="voteProgressPara">2178 Votes</p>
+                        </div>
+                        <div className="progress-bar">
+                          <div
+                            className="progress"
+                            style={{ width: '70%' }}
+                          ></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -245,12 +353,12 @@ const Index = () => {
                     />
                   </div>
                   <a href="#" className="tf__single_service_right_heading">
-                    Pick a plan on Met.Ai &amp; fall in love!
+                    The Best feeling in the World
                   </a>
-                  <p>Write unique &amp; plagiarism- free content for blogs</p>
+                  <p>Making someones dream come true.</p>
                   <Link legacyBehavior href="/signup">
                     <a className="tf__common_btn">
-                      Sign up for free
+                      Donate for a smile
                       <i className="fa-regular fa-arrow-right-long" />
                     </a>
                   </Link>
@@ -269,11 +377,11 @@ const Index = () => {
       <section className="tf__work_process pt_100 pb_50">
         <div className="container">
           <div className="row">
-            <div className="col-xl-8 m-auto">
+            <div className="col-xl-12 m-auto">
               <div className="tf__common_heading">
                 <h6>WORKING PROCESS</h6>
                 <h2 className="tf__common_heading_color">
-                  How Ai writer works
+                  How Stellar based Helpchain Works
                 </h2>
               </div>
             </div>
@@ -282,7 +390,7 @@ const Index = () => {
             <div className="col-xl-5 col-lg-6 m-auto">
               <div className="tf__work_process_img">
                 <img
-                  src="images/work_img-1.jpg"
+                  src="images/work_img-1.png"
                   alt="process"
                   className="img-fluid w-100"
                 />
@@ -292,12 +400,8 @@ const Index = () => {
               <div className="tf__process_accordion">
                 <Faq2 />
               </div>
-              <a
-                href="https://www.youtube.com/watch?v=B-ytMSuwbf8"
-                className="tf__common_btn play_btn"
-              >
-                How It Works{" "}
-                <i className="fa-sharp fa-regular fa-circle-play" />
+              <a href="##" className="tf__common_btn play_btn">
+                Become a Volunteer
               </a>
             </div>
           </div>
@@ -308,7 +412,7 @@ const Index = () => {
                   <h2>
                     <Counter end={8000000} />+
                   </h2>
-                  <h4>Professional &amp; Teams Choose Met.Ai</h4>
+                  <h4>Dreams converted to reality</h4>
                 </div>
                 <div className="tf__counter_img">
                   <img
@@ -333,12 +437,8 @@ const Index = () => {
           <div className="row">
             <div className="col-xl-8 col-md-8 m-auto">
               <div className="tf__common_heading">
-                <h6>
-                  <span>Met.ai</span> HELP YOU TO CREATE CONTENT FAST
-                </h6>
-                <h2 className="tf__common_heading_color">
-                  Power of an AI content
-                </h2>
+                <h6>See how our volunteers helped others</h6>
+                <h2 className="tf__common_heading_color">Our Volunteering</h2>
               </div>
             </div>
           </div>
@@ -347,7 +447,7 @@ const Index = () => {
               <div className="col-xl-4 col-lg-5 m-auto">
                 <div className="tf__content_creator_top_img">
                   <img
-                    src="images/creator_img-1.jpg"
+                    src="images/creator_img-1.png"
                     alt="creator"
                     className="img-fluid w-100"
                   />
@@ -355,21 +455,15 @@ const Index = () => {
               </div>
               <div className="col-xl-5 col-lg-5 mx-auto">
                 <div className="tf__content_creator_top_text">
-                  <h4>The following ideas are inspired by your brand.</h4>
+                  <h4>Blood donation camp in 6th harris street</h4>
                   <p>
-                    Got writer's block? Get ideas for stories, blog posts,
-                    website copy, research topics and more.
+                    This event happened on 12th Sep 2024, and has been a
+                    memorable day for all our volunteers.
                   </p>
                   <ul>
-                    <li>Save time rapid AI-driven generation</li>
-                    <li>No outdates continuous code document</li>
+                    <li>Donated 50L blood which will save lives</li>
+                    <li>Educated and inspired other for the good deed</li>
                   </ul>
-                  <Link legacyBehavior href="/signup">
-                    <a className="tf__common_btn">
-                      Sign up for free
-                      <i className="fa-regular fa-arrow-right-long" />
-                    </a>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -380,26 +474,21 @@ const Index = () => {
                 <div className="tf__single_content_creator_bottom">
                   <div className="tf__single_content_creator_bottom_img">
                     <img
-                      src="images/creator_img-2.jpg"
+                      src="images/creator_img-2.png"
                       alt="creator"
                       className="img-fluid w-100"
                     />
                   </div>
                   <div className="tf__single_content_creator_bottom_text">
-                    <h4>
-                      Write higher converting assistance post for all latest
-                      user
-                    </h4>
+                    <h4>Citywide Park Restoration Project</h4>
                     <p>
-                      Got writer's block? Get ideas for stories, blog posts,
-                      website copy, research topics and more.
+                      Participate in our Citywide Park Restoration Project to
+                      clean and revitalize local parks. Spend the day working
+                      with fellow volunteers, engaging in environmental
+                      conservation, and enhancing the community’s green spaces.
+                      Enjoy a fulfilling experience and contribute to a cleaner,
+                      more beautiful city.
                     </p>
-                    <Link legacyBehavior href="/signup">
-                      <a className="tf__common_btn tf__common_btn2">
-                        Sign up for free
-                        <i className="fa-regular fa-arrow-right-long" />
-                      </a>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -407,25 +496,21 @@ const Index = () => {
                 <div className="tf__single_content_creator_bottom">
                   <div className="tf__single_content_creator_bottom_img">
                     <img
-                      src="images/creator_img-3.jpg"
+                      src="images/creator_img-3.png"
                       alt="creator"
                       className="img-fluid w-100"
                     />
                   </div>
                   <div className="tf__single_content_creator_bottom_text">
-                    <h4>
-                      Generate blog posts, stories &amp; even book with Met.ai
-                    </h4>
+                    <h4>Annual Food Distribution Drive</h4>
                     <p>
-                      Got writer's block? Get ideas for stories, blog posts,
-                      website copy, research topics and more.
+                      Join our Annual Community Food Distribution Drive to
+                      assist in sorting and distributing essential food supplies
+                      to families in need. This event provides an opportunity to
+                      make a tangible impact in people’s lives, collaborate with
+                      other dedicated volunteers, and support our community in
+                      addressing food insecurity.
                     </p>
-                    <Link legacyBehavior href="/signup">
-                      <a className="tf__common_btn tf__common_btn2">
-                        Sign up for free
-                        <i className="fa-regular fa-arrow-right-long" />
-                      </a>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -444,8 +529,8 @@ const Index = () => {
           <div className="row">
             <div className="col-xl-8 col-md-8 m-auto">
               <div className="tf__common_heading">
-                <h6>TESTIMONIAL</h6>
-                <h2>What our clients say</h2>
+                <h6>From the people who got help</h6>
+                <h2>Success Stories</h2>
               </div>
             </div>
           </div>
@@ -459,94 +544,7 @@ const Index = () => {
       {/*============================
   TESTIMONIAL END
     ==============================*/}
-      {/*============================
-  PRICING START
-    ==============================*/}
-      <section className="tf__pricing pt_100 pb_75">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-8 col-md-8 m-auto">
-              <div className="tf__common_heading">
-                <h6>pricing</h6>
-                <h2 className="tf__common_heading_color">
-                  Fast copywriting by Ai
-                </h2>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-xl-4 col-md-6">
-              <div className="tf__single_pricing mb-4">
-                <h5>Free Plan</h5>
-                <p>Perfect for testing</p>
-                <Link legacyBehavior href="/signup">
-                  <a className="tf__common_btn tf__pricing_btn">
-                    Sign up for free{" "}
-                    <i className="fa-regular fa-arrow-right-long" />
-                  </a>
-                </Link>
-                <p>
-                  <span>Free</span>-7 days trial
-                </p>
-                <p>No Credit Card Required</p>
-                <ul>
-                  <li>10 credits per month</li>
-                  <li>100 bonus credits for the first month</li>
-                  <li>20+ languages</li>
-                  <li>80+ copywriting tools</li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <div className="tf__single_pricing mb-4">
-                <h5>Pro</h5>
-                <p>Perfect for testing</p>
-                <Link legacyBehavior href="/signup">
-                  <a className="tf__common_btn tf__pricing_btn">
-                    Sign up for free{" "}
-                    <i className="fa-regular fa-arrow-right-long" />
-                  </a>
-                </Link>
-                <p>
-                  <span>$19</span>-7 days trial
-                </p>
-                <p>No Credit Card Required</p>
-                <ul>
-                  <li>10 credits per month</li>
-                  <li>100 bonus credits for the first month</li>
-                  <li>20+ languages</li>
-                  <li>80+ copywriting tools</li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-xl-4 col-md-6">
-              <div className="tf__single_pricing mb-4">
-                <h5>Team</h5>
-                <p>Perfect for testing</p>
-                <Link legacyBehavior href="/signup">
-                  <a className="tf__common_btn tf__pricing_btn">
-                    Sign up for free{" "}
-                    <i className="fa-regular fa-arrow-right-long" />
-                  </a>
-                </Link>
-                <p>
-                  <span>$29</span>-7 days trial
-                </p>
-                <p>No Credit Card Required</p>
-                <ul>
-                  <li>10 credits per month</li>
-                  <li>100 bonus credits for the first month</li>
-                  <li>20+ languages</li>
-                  <li>80+ copywriting tools</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/*============================
-  PRICING END
-    ==============================*/}
+
       {/*============================
   FAQ START
     ==============================*/}
